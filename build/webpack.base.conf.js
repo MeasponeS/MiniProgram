@@ -68,6 +68,10 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!less-loader"
+            },
+            {
                 test: /\.vue$/,
                 loader: 'mpvue-loader',
                 options: vueLoaderConfig

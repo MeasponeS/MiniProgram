@@ -2,10 +2,6 @@
 /* eslint-env es6 */
 import ServiceProvider from './ServiceProvider';
 import MpAuthService from '@/services/mp/AuthService';
-import SessionService from '@/services/cache/SessionService';
-import Base64Service from '@/services/encrypt/Base64Service';
-import MD5Service from '@/services/encrypt/MD5Service';
-import JsonService from '@/services/encrypt/JsonService';
 import HrefService from '@/services/mp/HrefService';
 import ScanCodeService from '@/services/mp/ScanCodeService';
 import PopupService from '@/services/mp/PopupService';
@@ -55,11 +51,7 @@ export default class AppServiceProvider extends ServiceProvider {
     }
 
     register () {
-        this.app.register('base64', Base64Service);
-        this.app.register('md5', MD5Service);
-        this.app.register('json', JsonService);
         this.app.register('mp.auth', MpAuthService);
-        this.app.register('session', SessionService);
         this.app.register('href', HrefService);
         this.app.register('scan', ScanCodeService);
         this.app.register('popup', PopupService);

@@ -15,15 +15,14 @@ export default {
             num: 0
         }
     },
-    computed () {
+    computed: {
         testData () {
             return this.model.test.textData
         }
     },
-    methods : {
+    methods: {
         test () {
-            this.num ++
-            this.$command('TEST')
+            this.$command('TEST', this.num)
         }
     }
 }

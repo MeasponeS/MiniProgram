@@ -19,13 +19,14 @@ export default class Test extends Model {
 
     data () {
         return _.extend(super.data(), {
-            textData: null
+            textData: 0
         });
     }
 
     listeners () {
         super.listeners();
         this.addEventListener('test', function ({num}) {
+            console.log(num, '?????');
             this.state.textData = num;
         })
     }

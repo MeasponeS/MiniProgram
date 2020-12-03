@@ -1,6 +1,6 @@
 # pinehub
 
-> pinehub user client
+> remind list applet user client
 
 ## Build Setup
 

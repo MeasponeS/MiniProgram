@@ -22,7 +22,8 @@ export default {
     },
     methods: {
         test () {
-            this.$command('TEST', this.num)
+            let n = this.num + 1
+            this.$command('TEST', n)
         }
     }
 }
